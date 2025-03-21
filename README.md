@@ -42,14 +42,6 @@ pip install numpy cupy pycuda torch llvmlite
 
 ※詳細な依存関係は、各モジュール内のREADMEやコメントもご参照ください。
 
-## 使い方
-
-各モジュールは独立して実行可能なサンプルコードとして実装されています。例えば:
-
-- **XXXモジュール (XXX.py):**  
-  ```bash
-  python XXX.py
-  ```
 
 ## 貢献
 
