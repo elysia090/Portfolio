@@ -46,19 +46,10 @@ pip install numpy cupy pycuda torch llvmlite
 
 各モジュールは独立して実行可能なサンプルコードとして実装されています。例えば:
 
-- **FFTモジュール (I1.py):**  
+- **XXXモジュール (XXX.py):**  
   ```bash
-  python I1.py
+  python XXX.py
   ```
-  実行すると、CuPyを用いたFFTのパフォーマンス測定結果が表示されます。
-
-- **Fast Attention モジュール (G5.Attention (1).py):**  
-  PyTorchの環境下で、Transformer系の高速Attentionの動作を確認できます。
-
-- **LLVMトランスパイラ (G9.py):**  
-  LLVM IRからCUDAコードへの変換や、ドミネータ計算の結果を実行可能な形で出力します。
-
-それぞれのコード内に、使用方法や実行例についてコメントが記載されていますので、詳細はそちらをご確認ください。
 
 ## 貢献
 
