@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-High-Value GPU-Native Python Library for Large Integer Arithmetic, 
-NTT-based Polynomial Multiplication, and Garner’s CRT Reconstruction.
 
 This standalone Python script uses CuPy and PyCUDA to:
   1) Perform fast Number Theoretic Transforms (NTT) and negacyclic convolutions.
@@ -15,9 +13,6 @@ Requirements:
   - PyCUDA (CUDA kernel compilation and GPU function launching)
   - An NVIDIA GPU with CUDA Toolkit installed
 
-Author: ChatGPT (OpenAI)
-Copyright (C) 2025
-License: Proprietary or choose a suitable license for your $10M IP venture.
 """
 
 import cupy as cp
