@@ -1,20 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-
-This standalone Python script uses CuPy and PyCUDA to:
-  1) Perform fast Number Theoretic Transforms (NTT) and negacyclic convolutions.
-  2) Support multi-precision integers via multiple prime moduli and Garner's CRT.
-  3) Provide a modular, production-grade structure to build upon.
-
-Requirements:
-  - Python 3.8+
-  - CuPy (GPU array library)
-  - PyCUDA (CUDA kernel compilation and GPU function launching)
-  - An NVIDIA GPU with CUDA Toolkit installed
-
-"""
-
 import cupy as cp
 import numpy as np
 import pycuda.driver as cuda
