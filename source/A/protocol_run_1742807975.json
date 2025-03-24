@@ -1,0 +1,182 @@
+[
+  {
+    "timestamp": 1742807953.4809828,
+    "session_id": "prover-alpha",
+    "op_type": "SESSION_CREATE",
+    "payload_hash": "4f0c3ee7c54c57a76db1ce1a35570c6f41860967c11203a96b5ccbbbc9703bea",
+    "payload_preview": "{'n': 128, 'chunk_size': 64, 'poly_degree': 5, 'creation_time': 1742807953.4809525}",
+    "chain_hash": "0679b554f39da1cffea3419f7074823d9afb3dd9759291b151a96358d4834185",
+    "prev_hash": "901131d838b17aac0f7885b81e03cbdc9f5157a00343d30ab22083685ed1416a",
+    "full_payload": {
+      "n": 128,
+      "chunk_size": 64,
+      "poly_degree": 5,
+      "creation_time": 1742807953.4809525
+    }
+  },
+  {
+    "timestamp": 1742807956.0722384,
+    "session_id": "prover-alpha",
+    "op_type": "COMMIT",
+    "payload_hash": "4059411bd82c9a02b290ee6e96096f46dbaf2118140504a16a367ddd82f13894",
+    "payload_preview": "{'commit_val': '(4580999232150013328208436643907759304557180615322290501784595362306714331625, 140772139831962592023514525626106",
+    "chain_hash": "bba35011a2fa8d14585f76d9900019307e6178991b1dbc190721b24beef546da",
+    "prev_hash": "0679b554f39da1cffea3419f7074823d9afb3dd9759291b151a96358d4834185",
+    "full_payload": {
+      "commit_val": "(4580999232150013328208436643907759304557180615322290501784595362306714331625, 14077213983196259202351452562610635494142806605483621108229584909550019067874)",
+      "n": 128,
+      "flow_time": 358.3770488377049,
+      "metadata_hash": "cae25aecb958d4dffd3488721b0aa4939d2a78ea5a4c5e5eb68f6dcae6f300da",
+      "activity_count": 1
+    }
+  },
+  {
+    "timestamp": 1742807956.0724914,
+    "session_id": "prover-beta",
+    "op_type": "SESSION_CREATE",
+    "payload_hash": "136624a03f7dd3cd06547658d06c4633e86fa9e200f5c16fa09b212fe9bab81a",
+    "payload_preview": "{'n': 128, 'chunk_size': 64, 'poly_degree': 5, 'creation_time': 1742807956.072469}",
+    "chain_hash": "df0d93ac9b578f275b4edc7e6464b593a02386e16a5233902c83a76292b49698",
+    "prev_hash": "bba35011a2fa8d14585f76d9900019307e6178991b1dbc190721b24beef546da",
+    "full_payload": {
+      "n": 128,
+      "chunk_size": 64,
+      "poly_degree": 5,
+      "creation_time": 1742807956.072469
+    }
+  },
+  {
+    "timestamp": 1742807956.1067088,
+    "session_id": "prover-beta",
+    "op_type": "COMMIT",
+    "payload_hash": "81ca9f72539f98bde4664626cea55082f6190144726dc8e50ac98d04cf7bd094",
+    "payload_preview": "{'commit_val': '(21335829539778657615951126135808214046343997705843076348602940887898270498015, 80469248170953293300250586808140",
+    "chain_hash": "f04bfaf981a32808b41284edc511dacd57e5ff2a734e2cbdb6353f764c830313",
+    "prev_hash": "df0d93ac9b578f275b4edc7e6464b593a02386e16a5233902c83a76292b49698",
+    "full_payload": {
+      "commit_val": "(21335829539778657615951126135808214046343997705843076348602940887898270498015, 8046924817095329330025058680814090096610131750845732180502496869883592754294)",
+      "n": 128,
+      "flow_time": 386.5769537576954,
+      "metadata_hash": "62245355ff3ab7414142a6e5a4fe0a5ff90ad4f26722b4d09615f5e93c18ebfe",
+      "activity_count": 1
+    }
+  },
+  {
+    "timestamp": 1742807956.106827,
+    "session_id": "ALL",
+    "op_type": "CHALLENGE",
+    "payload_hash": "2fab21d09a16e7ceddc4d8d1261ba79b8b72ecead1dadfd1c336462558848a31",
+    "payload_preview": "{'alpha': 266176144, 'challenge_time': 1742807956.1068232, 'active_sessions': ['prover-alpha', 'prover-beta']}",
+    "chain_hash": "b05ca5a32ed0be3ba1c566e5ef5a026a8286583735642084e7732dc68ccbe822",
+    "prev_hash": "f04bfaf981a32808b41284edc511dacd57e5ff2a734e2cbdb6353f764c830313",
+    "full_payload": {
+      "alpha": 266176144,
+      "challenge_time": 1742807956.1068232,
+      "active_sessions": [
+        "prover-alpha",
+        "prover-beta"
+      ]
+    }
+  },
+  {
+    "timestamp": 1742807956.1354291,
+    "session_id": "prover-alpha",
+    "op_type": "RESPONSE",
+    "payload_hash": "9600a9ffa30e701774c3492d525a0d740691beae7a62f381ac0d83241f17bf72",
+    "payload_preview": "{'evaluation': 10410886104583975623858477578798933327736046764866218503919842744471682010323, 'proof': '(14353724750349820069079",
+    "chain_hash": "e51faef0a6f1450ef5632b31d647f423d10a9d6827d8e30a83b29984cf53d997",
+    "prev_hash": "b05ca5a32ed0be3ba1c566e5ef5a026a8286583735642084e7732dc68ccbe822",
+    "full_payload": {
+      "evaluation": 10410886104583975623858477578798933327736046764866218503919842744471682010323,
+      "proof": "(14353724750349820069079537547443517326099472235739740593527257010718642647962, 3047408751114511498421090443689758768857691675988469992403184972671515879649)",
+      "metadata_hash": "cae25aecb958d4dffd3488721b0aa4939d2a78ea5a4c5e5eb68f6dcae6f300da",
+      "challenge_binding": "7244e3269968bd47a20c891dea7eb61fe4f5013d90f49e93176584a4a75a7af9",
+      "activity_count": 2
+    }
+  },
+  {
+    "timestamp": 1742807956.1638978,
+    "session_id": "prover-beta",
+    "op_type": "RESPONSE",
+    "payload_hash": "7e83014b07706465824811eb381faa62d72da4f438b0f33a9366f4d06e351123",
+    "payload_preview": "{'evaluation': 8334817708399267968230148929778588633353663932572573172867081067946415069826, 'proof': '(411030687803419409770639",
+    "chain_hash": "600b057979ec0566eb9be98f0362c3594765b7b6aa215bef59bcce3cd5730421",
+    "prev_hash": "e51faef0a6f1450ef5632b31d647f423d10a9d6827d8e30a83b29984cf53d997",
+    "full_payload": {
+      "evaluation": 8334817708399267968230148929778588633353663932572573172867081067946415069826,
+      "proof": "(4110306878034194097706395793983382803799370408741751757454369355004129176836, 15988030779675495357554233821960434014862744187972996767409734093337413766316)",
+      "metadata_hash": "62245355ff3ab7414142a6e5a4fe0a5ff90ad4f26722b4d09615f5e93c18ebfe",
+      "challenge_binding": "acc6331eab066e128b78fbee509dd3384d40bfa2fce293f3cc9fb4b7bcbd9aa5",
+      "activity_count": 2
+    }
+  },
+  {
+    "timestamp": 1742807966.592367,
+    "session_id": "prover-alpha",
+    "op_type": "VERIFY",
+    "payload_hash": "0474fed5ef8a4cd82d72698b593ffbc08e6b65350592f18ff90e132f153c1c29",
+    "payload_preview": "{'kzg_ok': True, 'flow_ok': True, 'binding_ok': True, 'metadata_ok': True, 'binding_similarity': 1.0, 'magnitude_diff': 0.000441",
+    "chain_hash": "7abd3b8a174a48d3313d16a7ee418da734e33abad279f02c9d2a2a5a41d63bed",
+    "prev_hash": "600b057979ec0566eb9be98f0362c3594765b7b6aa215bef59bcce3cd5730421",
+    "full_payload": {
+      "kzg_ok": true,
+      "flow_ok": true,
+      "binding_ok": true,
+      "metadata_ok": true,
+      "binding_similarity": 1.0,
+      "magnitude_diff": 0.0004415200506182604,
+      "verification_time": 1742807966.5923612,
+      "result": true
+    }
+  },
+  {
+    "timestamp": 1742807975.7424583,
+    "session_id": "prover-beta",
+    "op_type": "VERIFY",
+    "payload_hash": "8582f8b5e7fa75a63381e56f3ba8c6ad6f58d14afc0232af63c422f74f1320d9",
+    "payload_preview": "{'kzg_ok': True, 'flow_ok': True, 'binding_ok': True, 'metadata_ok': True, 'binding_similarity': 1.0, 'magnitude_diff': 0.001650",
+    "chain_hash": "7f98e38bde88a683e8f68493e8299a32044bcfb37e7e6eb668abc66dbb2f9bd0",
+    "prev_hash": "7abd3b8a174a48d3313d16a7ee418da734e33abad279f02c9d2a2a5a41d63bed",
+    "full_payload": {
+      "kzg_ok": true,
+      "flow_ok": true,
+      "binding_ok": true,
+      "metadata_ok": true,
+      "binding_similarity": 1.0,
+      "magnitude_diff": 0.0016501043429595352,
+      "verification_time": 1742807975.7424538,
+      "result": true
+    }
+  },
+  {
+    "timestamp": 1742807975.743359,
+    "session_id": "AGGREGATOR",
+    "op_type": "SIGN_FINAL",
+    "payload_hash": "98ddbf031cca2d30e15b18be5ca00307fc83358b48babad0d2cbf1af8dd692b8",
+    "payload_preview": "{'final_hash': 'aae9961b82d052c1f9f7731923380d4d1fbd0f6608f82a120f0b83e773a4b89a', 'signature': '0x2c1950e228f9b7354dbd82956b3e0",
+    "chain_hash": "80544679d6d26fcb1ebdff11f1b1f609be6c219190387a076a5f4d8247c7726c",
+    "prev_hash": "7f98e38bde88a683e8f68493e8299a32044bcfb37e7e6eb668abc66dbb2f9bd0",
+    "full_payload": {
+      "final_hash": "aae9961b82d052c1f9f7731923380d4d1fbd0f6608f82a120f0b83e773a4b89a",
+      "signature": "0x2c1950e228f9b7354dbd82956b3e0c72a7b0f42b2b145b527f88c34e3c8012d",
+      "log_entries": 9,
+      "verification_results": 2,
+      "signing_time": 1742807975.7433572
+    }
+  },
+  {
+    "timestamp": 1742807975.7459269,
+    "session_id": "AGGREGATOR",
+    "op_type": "LOG_DUMP",
+    "payload_hash": "c965154af0d741a0a75f6395a0cd7d681d6ddef63fccda1bbaf99d316ad3157d",
+    "payload_preview": "{'filename': 'logs/protocol_run_1742807975.json', 'entries': 10, 'integrity_check': True, 'tamper_index': None}",
+    "chain_hash": "b5c3fda530874322737ed566b86e6819bf6b767d5fe5d3b04b6e0b745b48ed8e",
+    "prev_hash": "80544679d6d26fcb1ebdff11f1b1f609be6c219190387a076a5f4d8247c7726c",
+    "full_payload": {
+      "filename": "logs/protocol_run_1742807975.json",
+      "entries": 10,
+      "integrity_check": true,
+      "tamper_index": null
+    }
+  }
+]
