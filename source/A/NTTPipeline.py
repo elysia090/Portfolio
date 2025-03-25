@@ -455,7 +455,7 @@ if __name__ == "__main__":
         diff_ab = B - A
     print("A - B =", diff_ab)
 
-    prod_ab = A * B
+    prod_ab = A * B  #limit e19*e4 
     print("A * B =", prod_ab)
 
     print("\nRunning benchmark...\n")
