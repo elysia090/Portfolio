@@ -33,60 +33,92 @@ BASE: int = 1 << 16
 BASE_MASK: int = BASE - 1
 
 # Extended list of NTT-friendly prime moduli.
-# Each prime is of the form p = r * 2^k + 1, and a known primitive root is available.
+# Each prime is of the form p = r * 2^k + 1 and a corresponding primitive root is known.
 MODS: List[int] = [
-    # p < 2^30 
-    167772161,   # 5 * 2^25 + 1,         primitive root: 3
-    377487361,   # 45 * 2^23 + 1,        primitive root: 7
-    469762049,   # 7 * 2^26 + 1,         primitive root: 3
-    595591169,   # 71 * 2^23 + 1,        primitive root: 3
-    645922817,   # 77 * 2^23 + 1,        primitive root: 3
-    754974721,   # 11 * 2^24 + 1,        primitive root: 11
-    880803841,   # 105 * 2^23 + 1,       primitive root: 26
-    897581057,   # 107 * 2^23 + 1,       primitive root: 3
-    998244353,   # 119 * 2^23 + 1,       primitive root: 3
-    1004535809,  # 479 * 2^21 + 1,       primitive root: 3
+    # p < 2^30
+    167772161,   # 5 * 2^25 + 1
+    377487361,   # 45 * 2^23 + 1
+    469762049,   # 7 * 2^26 + 1
+    595591169,   # 71 * 2^23 + 1
+    645922817,   # 77 * 2^23 + 1
+    754974721,   # 11 * 2^24 + 1
+    880803841,   # 105 * 2^23 + 1
+    897581057,   # 107 * 2^23 + 1
+    998244353,   # 119 * 2^23 + 1
+    1004535809,  # 479 * 2^21 + 1
 
-    # 2^30 ≤ p < 2^31 
-    1107296257,  # primitive root: 10
-    1224736769,  # primitive root: 3
-    1300234241,  # primitive root: 3
-    1484783617,  # primitive root: 5
-    1711276033,  # primitive root: 29
-    1811939329,  # primitive root: 13
-    2013265921,  # primitive root: 31
-    2088763393,  # primitive root: 5
-    2113929217,  # primitive root: 5
-    2130706433,  # primitive root: 3
+    # 2^30 ≤ p < 2^31
+    1107296257,  # (primitive root: 10)
+    1224736769,  # (primitive root: 3)
+    1300234241,  # (primitive root: 3)
+    1484783617,  # (primitive root: 5)
+    1711276033,  # (primitive root: 29)
+    1811939329,  # (primitive root: 13)
+    2013265921,  # 31 * 2^27 + 1, (primitive root: 31)
+    2088763393,  # (primitive root: 5)
+    2113929217,  # (primitive root: 5)
+    2130706433,  # (primitive root: 3)
 
-    # 2^31 ≤ p < 2^32 
-    2281701377,  # primitive root: 3
-    2483027969,  # primitive root: 3
-    2533359617,  # primitive root: 3
-    2634022913,  # primitive root: 3
-    2717908993,  # primitive root: 5
-    2868903937,  # primitive root: 35
-    2885681153,  # primitive root: 3
-    3221225473,  # primitive root: 5
-    3238002689,  # primitive root: 3
-    3489660929,  # primitive root: 3
-    3892314113,  # primitive root: 3
-    3942645761,  # primitive root: 3
-    4076863489,  # primitive root: 7
-    4194304001   # primitive root: 3
+    # 2^31 ≤ p < 2^32
+    2281701377,  # 17 * 2^27 + 1, (primitive root: 3)
+    2483027969,  # (primitive root: 3)
+    2533359617,  # (primitive root: 3)
+    2634022913,  # (primitive root: 3)
+    2717908993,  # (primitive root: 5)
+    2868903937,  # (primitive root: 35)
+    2885681153,  # (primitive root: 3)
+    3221225473,  # 3 * 2^30 + 1, (primitive root: 5)
+    3238002689,  # (primitive root: 3)
+    3489660929,  # (primitive root: 3)
+    3892314113,  # (primitive root: 3)
+    3942645761,  # (primitive root: 3)
+    4076863489,  # (primitive root: 7)
+    4194304001   # (primitive root: 3)
 ]
 
-# Known primitive roots corresponding to each prime in MODS.
-# (These values are chosen based on known tables; if a prime is not explicitly listed,
-# the common choice is 3, except where noted.)
+# Corresponding primitive roots for each prime modulus in MODS.
 ROOTS: List[int] = [
     # For p < 2^30
-    3, 7, 3, 3, 3, 11, 26, 3, 3, 3,
+    3,   # for 167772161
+    7,   # for 377487361
+    3,   # for 469762049
+    3,   # for 595591169
+    3,   # for 645922817
+    11,  # for 754974721
+    26,  # for 880803841
+    3,   # for 897581057
+    3,   # for 998244353
+    3,   # for 1004535809
+
     # For 2^30 ≤ p < 2^31
-    10, 3, 3, 5, 29, 13, 31, 5, 5, 3,
+    10,  # for 1107296257
+    3,   # for 1224736769
+    3,   # for 1300234241
+    5,   # for 1484783617
+    29,  # for 1711276033
+    13,  # for 1811939329
+    31,  # for 2013265921
+    5,   # for 2088763393
+    5,   # for 2113929217
+    3,   # for 2130706433
+
     # For 2^31 ≤ p < 2^32
-    3, 3, 3, 3, 5, 35, 3, 3, 3, 3, 3, 7, 3
+    3,   # for 2281701377
+    3,   # for 2483027969
+    3,   # for 2533359617
+    3,   # for 2634022913
+    5,   # for 2717908993
+    35,  # for 2868903937
+    3,   # for 2885681153
+    5,   # for 3221225473
+    3,   # for 3238002689
+    3,   # for 3489660929
+    3,   # for 3892314113
+    3,   # for 3942645761
+    7,   # for 4076863489
+    3    # for 4194304001
 ]
+
 
 # ------------------------------------------------------------------------------
 # GPU Kernels (Written in CUDA C via CuPy RawKernel)
