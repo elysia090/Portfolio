@@ -37,7 +37,7 @@ BASE_MASK: int = BASE - 1
 MODS: List[int] = [
     # p < 2^30 
     167772161,   # 5 * 2^25 + 1,         primitive root: 3
-    377487361,   # 45 * 2^23 + 1,        primitive root: 3
+    377487361,   # 45 * 2^23 + 1,        primitive root: 7
     469762049,   # 7 * 2^26 + 1,         primitive root: 3
     595591169,   # 71 * 2^23 + 1,        primitive root: 3
     645922817,   # 77 * 2^23 + 1,        primitive root: 3
@@ -48,26 +48,26 @@ MODS: List[int] = [
     1004535809,  # 479 * 2^21 + 1,       primitive root: 3
 
     # 2^30 ≤ p < 2^31 
-    1107296257,  # primitive root: 3
+    1107296257,  # primitive root: 10
     1224736769,  # primitive root: 3
     1300234241,  # primitive root: 3
     1484783617,  # primitive root: 5
     1711276033,  # primitive root: 29
     1811939329,  # primitive root: 13
-    2013265921,  # 31 * 2^27 + 1,       primitive root: 3
+    2013265921,  # primitive root: 31
     2088763393,  # primitive root: 5
     2113929217,  # primitive root: 5
     2130706433,  # primitive root: 3
 
     # 2^31 ≤ p < 2^32 
-    2281701377,  # 17 * 2^27 + 1,       primitive root: 3
+    2281701377,  # primitive root: 3
     2483027969,  # primitive root: 3
     2533359617,  # primitive root: 3
     2634022913,  # primitive root: 3
     2717908993,  # primitive root: 5
     2868903937,  # primitive root: 35
     2885681153,  # primitive root: 3
-    3221225473,  # 3 * 2^30 + 1,         primitive root: 3
+    3221225473,  # primitive root: 5
     3238002689,  # primitive root: 3
     3489660929,  # primitive root: 3
     3892314113,  # primitive root: 3
@@ -81,9 +81,9 @@ MODS: List[int] = [
 # the common choice is 3, except where noted.)
 ROOTS: List[int] = [
     # For p < 2^30
-    3, 3, 3, 3, 3, 11, 26, 3, 3, 3,
+    3, 7, 3, 3, 3, 11, 26, 3, 3, 3,
     # For 2^30 ≤ p < 2^31
-    3, 3, 3, 5, 29, 13, 3, 5, 5, 3,
+    10, 3, 3, 5, 29, 13, 31, 5, 5, 3,
     # For 2^31 ≤ p < 2^32
     3, 3, 3, 3, 5, 35, 3, 3, 3, 3, 3, 7, 3
 ]
