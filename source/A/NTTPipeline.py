@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
 """
-High-Quality, No-Compromise GPU-Accelerated Multi-Precision Arithmetic (~2^300)
 Using Parallel Batched NTT + CRT, plus a Benchmark.
 
 Key Highlights:
 - Thorough parallelization for NTT (forward/inverse) with minimal Python overhead.
 - Custom GPU kernels for bit-reversal and butterfly steps across all rows.
-- Large set of prime moduli so their product exceeds 2^300 (for ~300-bit multiplication).
 - "BigInt" class that supports +, -, and GPU-based * for big integers.
 - Benchmark function to measure performance across different bit sizes.
 
@@ -504,7 +502,7 @@ def benchmark(iterations: int = 3) -> None:
 # Main Demo
 # ------------------------------------------------------------------------------
 if __name__ == "__main__":
-    # Demonstration with ~2^300 scale
+    # Demonstration with ~2^70 scale
     a_val = (1 << 300) + 12345678901234567890
     b_val = (1 << 299) + 98765432109876543210
 
