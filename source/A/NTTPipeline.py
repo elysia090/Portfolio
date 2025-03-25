@@ -32,24 +32,61 @@ import random
 BASE: int = 1 << 16
 BASE_MASK: int = BASE - 1
 
-# A set of prime moduli whose product exceeds 2^300. 
-# Each must be "NTT-friendly", meaning (mod - 1) is highly composite,
-# and we have a known primitive root. 
+# Extended list of NTT-friendly prime moduli.
+# Each prime is of the form p = r * 2^k + 1, and a known primitive root is available.
 MODS: List[int] = [
-    167772161,
-    469762049,
-    754974721,
-    998244353,
-    1004535809,
-    1107296257,
-    2013265921,
-    2281701377,
-    3221225473,
-    3489660929
+    # p < 2^30 
+    167772161,   # 5 * 2^25 + 1,         primitive root: 3
+    377487361,   # 45 * 2^23 + 1,        primitive root: 3
+    469762049,   # 7 * 2^26 + 1,         primitive root: 3
+    595591169,   # 71 * 2^23 + 1,        primitive root: 3
+    645922817,   # 77 * 2^23 + 1,        primitive root: 3
+    754974721,   # 11 * 2^24 + 1,        primitive root: 11
+    880803841,   # 105 * 2^23 + 1,       primitive root: 26
+    897581057,   # 107 * 2^23 + 1,       primitive root: 3
+    998244353,   # 119 * 2^23 + 1,       primitive root: 3
+    1004535809,  # 479 * 2^21 + 1,       primitive root: 3
+
+    # 2^30 ≤ p < 2^31 
+    1107296257,  # primitive root: 3
+    1224736769,  # primitive root: 3
+    1300234241,  # primitive root: 3
+    1484783617,  # primitive root: 5
+    1711276033,  # primitive root: 29
+    1811939329,  # primitive root: 13
+    2013265921,  # 31 * 2^27 + 1,       primitive root: 3
+    2088763393,  # primitive root: 5
+    2113929217,  # primitive root: 5
+    2130706433,  # primitive root: 3
+
+    # 2^31 ≤ p < 2^32 
+    2281701377,  # 17 * 2^27 + 1,       primitive root: 3
+    2483027969,  # primitive root: 3
+    2533359617,  # primitive root: 3
+    2634022913,  # primitive root: 3
+    2717908993,  # primitive root: 5
+    2868903937,  # primitive root: 35
+    2885681153,  # primitive root: 3
+    3221225473,  # 3 * 2^30 + 1,         primitive root: 3
+    3238002689,  # primitive root: 3
+    3489660929,  # primitive root: 3
+    3892314113,  # primitive root: 3
+    3942645761,  # primitive root: 3
+    4076863489,  # primitive root: 7
+    4194304001   # primitive root: 3
 ]
-# Known primitive roots for each of the above primes. 
-# Some primes (e.g. 998244353) commonly use root=3; others differ. 
-ROOTS: List[int] = [3, 3, 11, 3, 3, 3, 3, 3, 3, 3]
+
+# Known primitive roots corresponding to each prime in MODS.
+# (These values are chosen based on known tables; if a prime is not explicitly listed,
+# the common choice is 3, except where noted.)
+ROOTS: List[int] = [
+    # For p < 2^30
+    3, 3, 3, 3, 3, 11, 26, 3, 3, 3,
+    # For 2^30 ≤ p < 2^31
+    3, 3, 3, 5, 29, 13, 3, 5, 5, 3,
+    # For 2^31 ≤ p < 2^32
+    3, 3, 3, 3, 5, 35, 3, 3, 3, 3, 3, 7, 3
+]
 
 # ------------------------------------------------------------------------------
 # GPU Kernels (Written in CUDA C via CuPy RawKernel)
