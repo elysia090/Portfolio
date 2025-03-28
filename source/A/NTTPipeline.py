@@ -8,6 +8,9 @@ Key Highlights:
 - "BigInt" class that supports +, -, and GPU-based * for big integers.
 - Benchmark function to measure performance across different bit sizes.
 
+There is a better Cuda implementation, so please refer to it.
+：bigint_gpu.cu
+
 Requires:
 - Python 3
 - NumPy
