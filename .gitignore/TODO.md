@@ -1,1 +1,1 @@
-TODO:logs/, data/raw/, *.pyc, .env, etc.
+# TODO:logs/, data/raw/, *.pyc, .env, etc.
