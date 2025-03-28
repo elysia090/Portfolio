@@ -1,5 +1,4 @@
 ```
-
 project-root/
 ├── .github/workflows/          # CI/CDパイプライン (GitHub Actions)
 │   ├── ci.yml                  # Lint, Format Check, Type Check, Test (Unit/Integration), Coverage, MLproject Validate
