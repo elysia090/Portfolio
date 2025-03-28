@@ -1,4 +1,4 @@
-
+#!/usr/bin/env python3
 
 """
 XDP/eBPF Packet Processing Pipeline with GPU Acceleration (PyCUDA/CuPy)
@@ -68,8 +68,6 @@ Prerequisites:
 - Run this script with root privileges (`sudo python3 script.py`) or necessary capabilities (CAP_BPF, CAP_NET_ADMIN).
 """
 
-
-#!/usr/bin/env python3
 import sys
 import ctypes as ct
 import logging
