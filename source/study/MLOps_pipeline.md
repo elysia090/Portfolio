@@ -119,3 +119,77 @@ project-root/
                 └── test_registry.py      # MLflow Registry APIのMockを含む
 
 ```
+
+
+**主要ライブラリ & 技術スタック (ベストプラクティス準拠)**
+
+**1. 開発環境 & ツール**
+   - **バージョン管理:**
+     - Git
+     - GitHub / GitLab / Bitbucket
+   - **依存関係管理:**
+     - Poetry / PDM (`pyproject.toml` ベース)
+   - **コードエディタ:**
+     - VS Code (+ Extensions: Python, Pylance, Ruff, etc.)
+     - PyCharm Professional
+   - **コンテナ化:**
+     - Docker
+     - (Optional) VS Code Remote - Containers
+
+**2. コード品質 & 静的解析**
+   - **リンター / フォーマッター:**
+     - Ruff (Fast Linter & Formatter, integrates many tools)
+     - Black (Opinionated Code Formatter)
+   - **型チェック:**
+     - Mypy (Static Type Checker)
+
+**3. 設定管理 (`src/my_project/core/config.py`, `configs/`)**
+   - **Pydantic (especially `pydantic-settings`)** (Type-safe settings management)
+   - **Environment Variables** (Standard for deployment configuration)
+   - **Secrets Management:**
+     - HashiCorp Vault / AWS Secrets Manager / Google Secret Manager / Azure Key Vault
+
+**4. API層 (`src/my_project/api`)**
+   - **FastAPI** (High-performance web framework)
+   - **Uvicorn** (ASGI server for development/production)
+   - **Gunicorn** (WSGI server for managing Uvicorn workers in production)
+
+**5. データ処理 & 特徴量エンジニアリング (`src/my_project/data_processing`, `feature_engineering`)**
+   - **Pandas** (Data manipulation and analysis)
+   - **NumPy** (Numerical computing)
+   - **Scikit-learn** (Preprocessing, feature engineering, pipelines)
+   - **(大規模データ)** PySpark (Distributed data processing)
+   - **(大規模データ)** Delta Lake (Reliable storage layer on data lakes)
+   - **(データ検証)** Pandera / Great Expectations (Data schema and quality validation)
+
+**6. 機械学習モデル & MLOps (`src/my_project/models`, `MLproject`)**
+   - **ML フレームワーク:**
+     - Scikit-learn
+     - XGBoost
+     - LightGBM
+     - TensorFlow (Keras)
+     - PyTorch
+   - **MLOps プラットフォーム:**
+     - MLflow (Tracking, Registry, Projects, Deployment)
+   - **(ハイパーパラメータ最適化)** Optuna / Hyperopt / Ray Tune
+   - **(特徴量ストア - Optional)** Feast / Tecton / Databricks Feature Store
+
+**7. テスト (`tests/`)**
+   - **pytest** (Testing framework)
+   - **pytest-cov** (Code coverage measurement)
+   - **unittest.mock / pytest-mock** (Mocking dependencies)
+   - **FastAPI `TestClient`** (API integration testing)
+
+**8. CI/CD (継続的インテグレーション / 継続的デリバリー)**
+   - GitHub Actions / GitLab CI/CD / Jenkins / Azure Pipelines / CircleCI
+
+**9. オーケストレーション (`src/my_project/orchestration`)**
+   - **Apache Airflow** (Workflow definition and scheduling)
+   - **(代替)** Prefect / Dagster / Kubeflow Pipelines / AWS Step Functions / Azure Data Factory / Google Cloud Workflows
+
+**10. インフラストラクチャ & デプロイメント**
+- **クラウドプロバイダー:** AWS / Google Cloud Platform (GCP) / Microsoft Azure    
+- **コンテナオーケストレーション:** Kubernetes (K8s) (incl. EKS, GKE, AKS)
+- **サーバーレスコンピューティング:** AWS Lambda / Google Cloud Functions / Azure Functions / Cloud Run / Container Apps
+- **Infrastructure as Code (IaC):** Terraform / Pulumi / AWS CDK / Azure Bicep / CloudFormation / ARM Templates
+- **モニタリング & ロギング:** Prometheus & Grafana / ELK Stack / Datadog / CloudWatch / Azure Monitor / Google Cloud Operations Suite
