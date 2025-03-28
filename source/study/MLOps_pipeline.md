@@ -1,3 +1,5 @@
+```
+
 project-root/
 ├── .github/workflows/          # CI/CDパイプライン (GitHub Actions)
 │   ├── ci.yml                  # Lint, Format Check, Type Check, Test (Unit/Integration), Coverage, MLproject Validate
@@ -116,3 +118,5 @@ project-root/
             └── models/
                 ├── test_sklearn_model.py # MLflow APIのMockを含む
                 └── test_registry.py      # MLflow Registry APIのMockを含む
+
+```
