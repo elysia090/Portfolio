@@ -1,7 +1,9 @@
 # Portfolio
 
 このリポジトリは、先進的な技術やアルゴリズムの実装例をまとめたポートフォリオです。
+DataPipelineのベストプラクティス準拠のドキュメンテーション、
 GPUアクセラレーション、暗号技術、LLVM解析、FFT最適化、深層学習のFast Attentionなど、幅広い分野の実践的なコードサンプルを収録しています。
+
 これらのサンプルは、実務で培った高度な技術力と実装力を示すことを目的としています。
 
 ## 特徴
@@ -48,7 +50,8 @@ pip install numpy cupy pycuda torch llvmlite
 
 ## ライセンス
 
-このプロジェクトは、Apache-2.0 Licenseの下で公開されています。詳細は [LICENSE](./LICENSE) をご参照ください。
+このプロジェクトは、GNU General Public License v3.0
+の下で公開されています。詳細は [LICENSE](./LICENSE) をご参照ください。
 
 ## お問い合わせ
 
